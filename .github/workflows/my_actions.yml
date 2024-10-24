@@ -2,12 +2,17 @@ on: push
 
 jobs:
   job1:
+    name: 任务1
     runs-on: ubuntu-latest
     steps:
-      - run: ls -ailhF
-      - run: pwd
+      - name: 列出仓库内容
+        run: ls -ailhF
+      - name: 查看当前项目路径
+        run: pwd
   job2:
+    name: 任务2
     runs-on: windows-latest
     steps:
-      - run: node --version
+      - name: 查看 nodejs 版本
+        run: node --version
     
