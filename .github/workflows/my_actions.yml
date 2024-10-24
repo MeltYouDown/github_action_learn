@@ -4,13 +4,10 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - run: ls -ailhF
       - run: pwd
   job2:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - steps:
-          run: node --version
+      - run: node --version
     
